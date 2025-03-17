@@ -11,13 +11,14 @@ const erro = document.querySelector('#erro');
 const carregando = document.querySelector('#carregamento');
 
 document.addEventListener('keydown', function(event){
-    if(cidade.value.trim() !== ''){
-        if(event.key === 'Enter'){
+    
+    if(event.key === 'Enter'){
+        if(cidade.value.trim() !== ''){
             consulta();
+        }else{
+            erro.style.display = 'block';
+            erro.innerHTML = 'Digite algo';
         }
-    }else{
-        erro.style.display = 'block';
-        erro.textContent = 'Digite algo';
     }
 })
 
@@ -33,6 +34,7 @@ search.addEventListener('click', () => {
 function consulta(){
     if(erro.style.display === 'block'){
         erro.style.display = 'none'; 
+        erro.innerHTML = 'Não encontramos sua cidade';
     }
 
     carregando.style.display = 'block';
@@ -55,6 +57,7 @@ function consulta(){
             container.style.display = 'block';
         }else{
             erro.style.display = 'block';
+            erro.innerHTML = 'Não encontramos sua cidade';
 
             if(container.style.display === 'block'){
                 container.style.display = 'none'; 
