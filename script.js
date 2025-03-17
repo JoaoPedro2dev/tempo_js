@@ -10,7 +10,21 @@ const container = document.querySelector('#infosContent');
 const erro = document.querySelector('#erro');
 const carregando = document.querySelector('#carregamento');
 
-search.addEventListener('click', consulta);
+document.addEventListener('keydown', function(event){
+    console.log(event.key);
+    if(event.key = 'Enter'){
+        consulta();
+    }
+})
+
+search.addEventListener('click', () => {
+    if(cidade.value.trim() == ''){
+        erro.style.display = 'block';
+        erro.textContent = 'Digite algo';
+    }else{
+        consulta();
+    }
+});
 
 function consulta(){
     if(erro.style.display === 'block'){
