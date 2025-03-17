@@ -11,8 +11,7 @@ const erro = document.querySelector('#erro');
 const carregando = document.querySelector('#carregamento');
 
 document.addEventListener('keydown', function(event){
-    console.log(event.key);
-    if(event.key = 'Enter'){
+    if(event.key === 'Enter'){
         consulta();
     }
 })
