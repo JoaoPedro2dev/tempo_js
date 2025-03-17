@@ -11,8 +11,13 @@ const erro = document.querySelector('#erro');
 const carregando = document.querySelector('#carregamento');
 
 document.addEventListener('keydown', function(event){
-    if(event.key === 'Enter'){
-        consulta();
+    if(cidade.value.trim() !== ''){
+        if(event.key === 'Enter'){
+            consulta();
+        }
+    }else{
+        erro.style.display = 'block';
+        erro.textContent = 'Digite algo';
     }
 })
 
