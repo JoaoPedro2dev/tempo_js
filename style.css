@@ -19,7 +19,7 @@ body{
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
-    width: 300px;
+    width: 400px;
 }
 
 #searchBox{
@@ -49,25 +49,39 @@ body{
     text-align: center;
     color: #fff;
     cursor: default;
+    display: none;
 }
 
 #infosContent > div{
-    margin-top: 15px;
+    margin-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
 }
 
-#infosContent > div > i{
-    font-size: 45px;
+#infosContent > div > img{
+    width: 80px;
 }
 
 #infosContent > div > div > span{
+    width: 100% ;
     font-size: 30px;
     font-weight: bold;
+    text-align: left;
 }
 
 #infosContent > div > div > p{
     text-align: left;
+}
+
+#erro, #carregamento{
+    display: none;
+    text-align: center;
+}
+
+#erro > p, #carregamento > p{
+    color: #fff;
+    font-weight: bold;
+    font-size: large;
 }

@@ -11,20 +11,28 @@
 <body>
     <div id="container">
         <div id="searchBox">
-            <input type="text" name="" id="cidadeInput">
+            <input type="text" placeholder="Digite uma cidade" id="cidadeInput">
             <i class="bi bi-search" id="search"></i>
         </div>
 
         <div id="infosContent">
-            <h2 id="cidadeNome">Nome local</h2>
+            <h2 id="cidadeNome"></h2>
 
             <div>
                 <img src="" alt="" id="icon">
                 <div>
-                    <span id="tmeperatura">24,4C°</span>
-                    <p id="clima">Ensolarado</p>
+                    <span id="tmeperatura"></span>
+                    <p id="clima"></p>
                 </div>
             </div>
+        </div>
+
+        <div id="carregamento">
+            <p>Procurando...</p>
+        </div>
+
+        <div id="erro">
+            <p>Não encontramos sua cidade</p>
         </div>
     </div>
 </body>
