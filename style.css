@@ -86,6 +86,12 @@ body{
     font-size: large;
 }
 
+.buttons{
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
 .graus{
     width: 50px;
     height: 50px;
@@ -93,7 +99,8 @@ body{
     border: none;
 
     background-color: #fff;
-    margin-bottom: 10px;
     box-shadow: 0px 4px 10px rgba(99, 99, 99, 0.4);
     cursor: pointer;
+
+    display: none;
 }

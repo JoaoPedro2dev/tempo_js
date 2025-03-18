@@ -66,9 +66,13 @@ function consulta(){
                 temperaturaSpan.textContent = newTemperatura.toFixed(2).replace(".", ",") + "F°";
             })
 
+            fahrenheit.style.display = 'block';
+
             celsius.addEventListener('click', () => {
                 temperaturaSpan.textContent = temperatura + "C°";
             })
+
+            celsius.style.display = 'block';
             
         }else{
             erro.style.display = 'block';
