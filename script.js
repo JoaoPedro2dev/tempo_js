@@ -57,6 +57,19 @@ function consulta(){
             climaP.textContent = clima;
             img.src = `https://openweathermap.org/img/wn/${icon}@2x.png`;
             container.style.display = 'block';
+
+            const fahrenheit = document.querySelector('#fahrenheit');
+            const celsius  = document.querySelector('#celsius');
+
+            fahrenheit.addEventListener('click', () => {
+                const newTemperatura = Number(temperatura.replace(',','.')) * 1.8 + 32;
+                temperaturaSpan.textContent = newTemperatura.toFixed(2).replace(".", ",") + "F°";
+            })
+
+            celsius.addEventListener('click', () => {
+                temperaturaSpan.textContent = temperatura + "C°";
+            })
+            
         }else{
             erro.style.display = 'block';
             erro.innerHTML = 'Não encontramos sua cidade';
