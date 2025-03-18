@@ -38,11 +38,15 @@ function consulta(){
     }
 
     carregando.style.display = 'block';
+    fahrenheit.style.display = 'none';
+    celsius.style.display = 'none';
 
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cidade.value.trim()}&appid=${key}&units=metric&lang=pt`)
     .then(response => response.json())
     .then(data => {
         carregando.style.display = 'none';
+        fahrenheit.style.display = 'none';
+        celsius.style.display = 'none';
         if(data.name){
             const name = data.name 
             const clima = data.weather[0].description;
