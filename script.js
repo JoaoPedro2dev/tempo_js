@@ -46,12 +46,14 @@ function consulta(){
         if(data.name){
             const name = data.name 
             const clima = data.weather[0].description;
-            const temperatura = data.main.temp;
+            let temperatura = data.main.temp;
             const icon = data.weather[0].icon;
             const pais = data.sys.country;
 
+            temperatura = temperatura.toFixed(2).replace(".", ",");
+
             cidadeNome.textContent = name+", "+pais;
-            temperaturaSpan.textContent = temperatura + "C°";
+            temperaturaSpan.textContent = temperatura  + "C°";
             climaP.textContent = clima;
             img.src = `https://openweathermap.org/img/wn/${icon}@2x.png`;
             container.style.display = 'block';
