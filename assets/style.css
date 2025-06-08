@@ -89,6 +89,13 @@ body {
   text-transform: capitalize;
 }
 
+#alerta {
+  display: none;
+  color: #fff;
+  font-size: large;
+  text-align: center;
+}
+
 #erro,
 #carregamento {
   display: none;
