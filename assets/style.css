@@ -1,106 +1,128 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background-color: #f2f2f2;
-    max-width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: sans-serif;
+body {
+  background-color: #f2f2f2;
+  max-width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
 }
 
-#container{
-    background: linear-gradient(160deg, #8b8bff, #8fddeb);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
-    width: 400px;
+#container {
+  background-color: #006ed6;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(80, 79, 79, 0.6);
+  width: 400px;
 }
 
-#searchBox{
-    padding: 5px 10px;
-    background-color: #fff;
-    border-radius: 5px;
-    width: 100%;
-    display: flex;
-    margin-bottom: 20px;
+#searchBox {
+  padding: 10px 15px;
+  background-color: #fff;
+  border-radius: 6px;
+  width: 100%;
+  display: flex;
+  margin-bottom: 20px;
 }
 
-#searchBox > input{
-    width: 100%;
-    border: none;
-    outline: none;
+#searchBox > input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: medium;
 }
 
-#searchBox > i{
-    font-size: 23px;
-    cursor: pointer;
+#searchBox > i {
+  font-size: 23px;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
-#infosContent{
-    background-color: #5050c6;
-    padding: 20px;
-    border-radius: 5px;
-    text-align: center;
-    color: #fff;
-    cursor: default;
-    display: none;
+#searchBox > i:hover {
+  color: #4092e0;
 }
 
-#infosContent > div{
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+#infosContent {
+  background-color: #4092e0;
+  padding: 20px;
+  border-radius: 6px;
+  text-align: center;
+  color: #fff;
+  cursor: default;
+  display: none;
 }
 
-#infosContent > div > img{
-    width: 80px;
+#infosContent > div {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
-#infosContent > div > div > span{
-    width: 100% ;
-    font-size: 30px;
-    font-weight: bold;
-    text-align: left;
+#infosContent > div > #icon {
+  width: 100px;
+  height: auto;
 }
 
-#infosContent > div > div > p{
-    text-align: left;
+#infosContent > div > div {
+  text-align: start;
 }
 
-#erro, #carregamento{
-    display: none;
-    text-align: center;
+#infosContent > div > div > span {
+  width: 100%;
+  font-size: 30px;
+  font-weight: bold;
 }
 
-#erro > p, #carregamento > p{
-    color: #fff;
-    font-weight: bold;
-    font-size: large;
+#infosContent > div > div > p {
+  margin-top: 2px;
 }
 
-.buttons{
-    margin-top: 15px;
-    display: flex;
-    gap: 10px;
+#infosContent > div > div > p::first-letter {
+  text-transform: capitalize;
 }
 
-.graus{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: none;
+#erro,
+#carregamento {
+  display: none;
+  text-align: center;
+}
 
-    background-color: #fff;
-    box-shadow: 0px 4px 10px rgba(99, 99, 99, 0.4);
-    cursor: pointer;
+#erro > p,
+#carregamento > p {
+  color: #fff;
+  font-weight: bold;
+  font-size: large;
+}
 
-    display: none;
+.buttons {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.graus {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+
+  background-color: #fff;
+  box-shadow: 0px 4px 10px rgba(99, 99, 99, 0.4);
+  cursor: pointer;
+
+  font-size: medium;
+
+  display: none;
+}
+
+.graus.selected {
+  background-color: #cecece;
 }
