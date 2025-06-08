@@ -126,3 +126,27 @@ body {
 .graus.selected {
   background-color: #cecece;
 }
+
+@media screen and (max-width: 500px) {
+  #container {
+    border-radius: 0;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+  }
+
+  #searchBox {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: calc(100% - 40px);
+  }
+
+  #infosContent {
+    width: 100%;
+  }
+}
