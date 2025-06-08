@@ -1,6 +1,8 @@
+import { API_KEY } from "./config.js";
+
 const cidade = document.querySelector("#cidadeInput");
 const search = document.querySelector("#search");
-const key = "fb37b853ff466458e939d137aaac94c6";
+const key = API_KEY;
 
 const temperaturaSpan = document.querySelector("#tmeperatura");
 const cidadeNome = document.querySelector("#cidadeNome");
@@ -11,8 +13,6 @@ const fahrenheit = document.querySelector("#fahrenheit");
 const celsius = document.querySelector("#celsius");
 
 const alerta = document.querySelector("#alerta");
-
-// console.log(alerta.textContent);
 
 document.addEventListener("keydown", function (event) {
   if (event.key === "Enter") consulta();
