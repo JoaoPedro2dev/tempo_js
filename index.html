@@ -1,49 +1,48 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <script src="script.js" defer></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <script src="assets/script.js" defer></script>
     <title>Previsão do tempo</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="container">
-        <div id="searchBox">
-            <input type="text" placeholder="Digite uma cidade" id="cidadeInput">
-            <i class="bi bi-search" id="search"></i>
-        </div>
+      <div id="searchBox">
+        <input type="text" placeholder="Digite uma cidade" id="cidadeInput" />
+        <i class="bi bi-search" id="search"></i>
+      </div>
 
-        <div id="infosContent">
-            <h2 id="cidadeNome"></h2>
+      <div id="infosContent">
+        <h2 id="cidadeNome"></h2>
 
-            <div>
-                <img src="" alt="" id="icon">
-                <div>
-                    <span id="tmeperatura"></span>
-                    <p id="clima"></p>
-                </div>
-            </div>
+        <div>
+          <img src="" alt="" id="icon" />
+          <div>
+            <span id="tmeperatura"></span>
+            <p id="clima"></p>
+          </div>
         </div>
+      </div>
 
-        <div class="buttons">
-            <button class="graus" id="fahrenheit">
-                <sup>°</sup>F
-            </button>
-            
-            <button class="graus" id="celsius">
-                <sup>°</sup>C
-            </button>
-        </div>
+      <div class="buttons">
+        <button class="graus" id="fahrenheit"><sup>°</sup>F</button>
 
-        <div id="carregamento">
-            <p>Procurando...</p>
-        </div>
+        <button class="graus" id="celsius"><sup>°</sup>C</button>
+      </div>
 
-        <div id="erro">
-            <p>Não encontramos sua cidade</p>
-        </div>
+      <div id="carregamento">
+        <p>Procurando...</p>
+      </div>
+
+      <div id="erro">
+        <p>Não encontramos sua cidade</p>
+      </div>
     </div>
-</body>
+  </body>
 </html>
